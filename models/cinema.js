@@ -30,4 +30,11 @@ Cinema.prototype.findFilmByYear = function(filmYear) {
   return findFilmByYear
 }
 
+Cinema.prototype.checkLength = function(filmLength) {
+  const checkLength = this.films.some(function(film){
+    return film.length >= filmLength
+  })
+  return checkLength
+}
+
 module.exports = Cinema;
