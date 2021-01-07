@@ -3,11 +3,12 @@ const Cinema = function (films) {
 };
 
 Cinema.prototype.listOfTitles = function() {
-  const titles = this.films.filter(function(title){
-    return title
-});
+  const titles = this.films.map(function(movie){
+    return movie.title
+  })
+  return titles
+}
+ 
 
-//const evens = ints, .filter(function(item){
-  //return item % 2 === 0;
 
 module.exports = Cinema;
